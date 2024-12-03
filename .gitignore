@@ -1,0 +1,36 @@
+# Entorno virtual
+venv/
+
+# Archivos de configuración
+*.env
+*.ini
+*.cfg
+
+# Archivos compilados de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Base de datos SQLite (si usas SQLite para desarrollo)
+*.db
+
+# Archivos de migración generados por Flask-Migrate
+migrations/versions/
+
+# Configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos de depuración y caché de Flask
+instance/
+*.pytest_cache/
+.cache/
+
+# Configuración de herramientas
+.vscode/
+.idea/
+*.swp
