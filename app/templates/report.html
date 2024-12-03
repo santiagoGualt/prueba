@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  >
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Reporte de Tareas Pendientes</h1>
+
+    {% for employee in employees %}
+    <div class="card mb-3">
+      <div class="card-header bg-secondary text-white">
+        {{ employee.name }} ({{ employee.email }})
+      </div>
+      <ul class="list-group list-group-flush">
+        {% for task in employee.tasks %}
+        {% if task.status == 'pending' %}
+        <li class="list-group-item">
+          <strong>{{ task.title }}</strong> - Fecha límite: {{ task.deadline }}
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
