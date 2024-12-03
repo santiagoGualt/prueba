@@ -32,17 +32,21 @@ Esta es una aplicación de gestión de tareas (To-Do) creada con Flask. Permite 
    git clone https://github.com/tu-usuario/todo-flask.git
    cd prueba
 2. **Se debe generar el entorno virtual**:
-python3 -m venv venv
-source venv/bin/activate  # En Windows usa: venv\Scripts\activate
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # En Windows usa: venv\Scripts\activate
+
 (para linux)
 
 pip install -r requirements.txt
 
 3. **Migraciones de BD **:
- flask db init
- flask db migrate -m "Initial migration"
- flask db upgrade
-4. **Ejecutar **:
+   ```bash
+   flask db init
+   flask db migrate -m "Initial migration"
+   flask db upgrade
+   
+5. **Ejecutar **:
 
  flask run
 
